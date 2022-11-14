@@ -4,6 +4,13 @@ $(document).ready(function () {
     $('.navbar').toggleClass('nav-toggle');
   });
 
+  $(document).click(function (e) {
+    if (e.target.id !== 'menu' && e.target.id !== 'navbar') {
+      $('#menu').removeClass('fa-times');
+      $('.navbar').removeClass('nav-toggle');
+    }
+  });
+
   $(window).on('scroll load', function () {
     $('#menu').removeClass('fa-times');
     $('.navbar').removeClass('nav-toggle');
